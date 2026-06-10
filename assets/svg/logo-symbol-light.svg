@@ -1,0 +1,19 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="256" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D97706"></stop>
+      <stop offset="1" stop-color="#F59E0B"></stop>
+    </linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="0" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F59E0B" stop-opacity="0.12"></stop>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0.03"></stop>
+    </linearGradient>
+  </defs>
+  
+  <circle cx="72" cy="128" r="56" stroke="url(#g)" stroke-width="18" fill="url(#gb)"></circle>
+  
+  <circle cx="184" cy="128" r="56" stroke="url(#g)" stroke-width="18" fill="url(#gb)"></circle>
+  
+  <circle cx="128" cy="128" r="44" fill="#fffbf0" stroke="#D97706" stroke-width="11"></circle>
+  <text x="128" y="146" text-anchor="middle" font-family="&#39;Syne&#39;, Georgia, serif" font-weight="700" font-size="42" fill="#D97706">¢</text>
+</svg>

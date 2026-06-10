@@ -1,0 +1,23 @@
+<svg width="260" height="200" viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="160" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D97706"></stop>
+      <stop offset="1" stop-color="#F59E0B"></stop>
+    </linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F59E0B" stop-opacity="0.12"></stop>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0.03"></stop>
+    </linearGradient>
+  </defs>
+  
+  <circle cx="96" cy="52" r="34" stroke="url(#g)" stroke-width="10" fill="url(#gb)"></circle>
+  
+  <circle cx="164" cy="52" r="34" stroke="url(#g)" stroke-width="10" fill="url(#gb)"></circle>
+  
+  <circle cx="130" cy="52" r="26" fill="#fffbf0" stroke="#D97706" stroke-width="7"></circle>
+  <text x="130" y="62" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="26" fill="#D97706">¢</text>
+  
+  <text x="130" y="122" text-anchor="middle" font-family="&#39;Syne&#39;, Georgia, serif" font-weight="700" font-size="38" letter-spacing="2" fill="#1a1410">LOOP<tspan fill="#D97706">CRED</tspan></text>
+  
+  <text x="130" y="150" text-anchor="middle" font-family="&#39;Space Grotesk&#39;, Georgia, sans-serif" font-weight="300" font-size="12" letter-spacing="4" fill="#D97706" opacity="0.8">PERSONAL CREDIT</text>
+</svg>
