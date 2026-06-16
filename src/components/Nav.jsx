@@ -19,7 +19,7 @@ export default function Nav() {
           <li><a href="#faq" onClick={close}>FAQ</a></li>
         </ul>
 
-        <a className="btn btn-primary nav-cta" href="https://wa.me/5565992082256" target="_blank" rel="noreferrer">Adquirir Licença</a>
+        <a className="btn btn-primary nav-cta" href="https://wa.me/+556574004208?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20uma%20licen%C3%A7a%20do%20LOOPCRED.%20Poderiam%20me%20enviar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noreferrer">Adquirir Licença</a>
 
         <button
           className="nav-burger"

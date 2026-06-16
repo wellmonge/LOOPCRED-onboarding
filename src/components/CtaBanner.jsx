@@ -1,6 +1,6 @@
 import Reveal from './Reveal'
 
-const WA = 'https://wa.me/5565992082256'
+const WA = 'https://wa.me/+556574004208?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20uma%20licen%C3%A7a%20do%20LOOPCRED.%20Poderiam%20me%20enviar%20mais%20informa%C3%A7%C3%B5es%3F'
 
 export default function CtaBanner() {
   return (
