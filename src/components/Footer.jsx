@@ -8,7 +8,7 @@ const PRODUCT = [
 ]
 
 const CONTACT = [
-  { label: 'WhatsApp: (65) 99208-2256', href: 'https://wa.me/5565992082256' },
+  { label: 'WhatsApp: (65) +55 7400-4208', href: 'https://wa.me/+556574004208' },
 ]
 
 export default function Footer() {
