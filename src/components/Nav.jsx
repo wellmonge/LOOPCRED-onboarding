@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Logo from './Logo'
 
-const DOWNLOAD = '/LoopCred-1.1.0.msi'
+const DOWNLOAD = 'https://drive.google.com/uc?export=download&id=1zv6XLsYKL5SNxeA3o0mEpDuah63NL98s'
 
 export default function Nav() {
   const [open, setOpen] = useState(false)

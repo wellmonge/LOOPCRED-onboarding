@@ -1,7 +1,7 @@
 import Logo from './Logo'
 
 const WA = 'https://wa.me/+556574004208?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20uma%20licen%C3%A7a%20do%20LOOPCRED.%20Poderiam%20me%20enviar%20mais%20informa%C3%A7%C3%B5es%3F'
-const DOWNLOAD = '/LoopCred-1.1.0.msi'
+const DOWNLOAD = 'https://drive.google.com/uc?export=download&id=1zv6XLsYKL5SNxeA3o0mEpDuah63NL98s'
 
 const metrics = [
   { num: '100%', label: 'Funciona Offline' },
