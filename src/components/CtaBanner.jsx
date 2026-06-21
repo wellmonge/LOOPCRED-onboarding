@@ -1,6 +1,7 @@
 import Reveal from './Reveal'
 
 const WA = 'https://wa.me/+556574004208?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20uma%20licen%C3%A7a%20do%20LOOPCRED.%20Poderiam%20me%20enviar%20mais%20informa%C3%A7%C3%B5es%3F'
+const DOWNLOAD = '/LoopCred-1.1.0.msi'
 
 export default function CtaBanner() {
   return (
@@ -22,6 +23,14 @@ export default function CtaBanner() {
             style={{ fontSize: '1.05rem', padding: '16px 40px' }}
           >
             Adquirir Licença pelo WhatsApp
+          </a>
+          <a
+            href={DOWNLOAD}
+            download
+            className="btn btn-ghost"
+            style={{ fontSize: '1.05rem', padding: '16px 40px', marginTop: '12px' }}
+          >
+            Baixar e Testar Grátis
           </a>
           <p className="cta-note">Licença anual · Sem mensalidade · Instalação assistida inclusa</p>
         </Reveal>

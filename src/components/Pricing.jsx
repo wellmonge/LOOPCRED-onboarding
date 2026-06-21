@@ -1,6 +1,7 @@
 import Reveal from './Reveal'
 
 const WA = 'https://wa.me/+556574004208?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20uma%20licen%C3%A7a%20do%20LOOPCRED.%20Poderiam%20me%20enviar%20mais%20informa%C3%A7%C3%B5es%3F'
+const DOWNLOAD = '/LoopCred-1.1.0.msi'
 
 const PLANS = [
   {
@@ -112,6 +113,14 @@ export default function Pricing() {
                   className={`btn ${plan.featured ? 'btn-primary' : 'btn-ghost'}`}
                 >
                   {plan.cta}
+                </a>
+                <a
+                  href={DOWNLOAD}
+                  download
+                  className="btn btn-ghost"
+                  style={{ marginTop: '8px' }}
+                >
+                  Baixar e Testar Grátis
                 </a>
               </div>
             </Reveal>

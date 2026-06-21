@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    background: #110e0a;
+    font-family: 'Georgia', serif;
+  }
+
+  .frame {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 56px 80px 52px;
+    overflow: hidden;
+  }
+
+  /* ── Background glows ── */
+  .glow-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(ellipse at center, rgba(245,158,11,0.13) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .glow-top {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 400px;
+    background: radial-gradient(ellipse at center, rgba(245,158,11,0.10) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .glow-bottom {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse at center, rgba(245,158,11,0.09) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ── Grid lines (subtle) ── */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(245,158,11,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,158,11,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  /* ── Border frame ── */
+  .border-frame {
+    position: absolute;
+    inset: 24px;
+    border: 1px solid rgba(245,158,11,0.15);
+    border-radius: 24px;
+    pointer-events: none;
+  }
+
+  /* ── TAG ── */
+  .tag {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #F59E0B;
+    background: rgba(245,158,11,0.10);
+    border: 1px solid rgba(245,158,11,0.25);
+    border-radius: 99px;
+    padding: 6px 20px;
+    margin-bottom: 0;
+  }
+
+  /* ── TOP section ── */
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── LOGO ── */
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  /* ── HEADLINE ── */
+  .headline {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 1.12;
+    color: #faf5eb;
+    letter-spacing: -0.5px;
+    max-width: 860px;
+  }
+  .headline span {
+    color: #F59E0B;
+  }
+
+  .sub {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    line-height: 1.55;
+    color: #a89880;
+    max-width: 680px;
+  }
+
+  /* ── METRICS STRIP ── */
+  .metrics {
+    display: flex;
+    gap: 0;
+    background: rgba(245,158,11,0.06);
+    border: 1px solid rgba(245,158,11,0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+  .metric {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    border-right: 1px solid rgba(245,158,11,0.12);
+    gap: 5px;
+  }
+  .metric:last-child { border-right: none; }
+  .metric-num {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #F59E0B;
+    letter-spacing: -0.5px;
+  }
+  .metric-label {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    color: #a89880;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ── FEATURES GRID ── */
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .feat {
+    background: rgba(26,20,16,0.8);
+    border: 1px solid rgba(245,158,11,0.12);
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .feat-icon {
+    font-size: 26px;
+    line-height: 1;
+  }
+  .feat-title {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #faf5eb;
+    line-height: 1.2;
+  }
+
+  /* ── BOTTOM CTA ── */
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(245,158,11,0.3), transparent);
+    margin-bottom: 4px;
+  }
+  .cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .cta-badge {
+    background: linear-gradient(135deg, #F59E0B, #FBBF24);
+    color: #110e0a;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 800;
+    border-radius: 12px;
+    padding: 14px 32px;
+    letter-spacing: 0.02em;
+  }
+  .cta-price {
+    text-align: right;
+  }
+  .cta-price .price-label {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    color: #a89880;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .cta-price .price-value {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: #faf5eb;
+    line-height: 1;
+  }
+  .cta-price .price-value sup {
+    font-size: 18px;
+    color: #F59E0B;
+    vertical-align: super;
+  }
+  .cta-price .price-value span {
+    font-size: 15px;
+    color: #a89880;
+    font-weight: 400;
+  }
+  .cta-note {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    color: rgba(168,152,128,0.6);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .url-tag {
+    font-family: monospace;
+    font-size: 14px;
+    color: rgba(245,158,11,0.5);
+    letter-spacing: 0.03em;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+  <!-- Background -->
+  <div class="grid"></div>
+  <div class="glow-top"></div>
+  <div class="glow-center"></div>
+  <div class="glow-bottom"></div>
+  <div class="border-frame"></div>
+
+  <!-- TOP -->
+  <div class="top">
+    <div class="tag">Software de Gestão de Empréstimos</div>
+
+    <!-- Logo SVG -->
+    <div class="logo-wrap">
+      <svg height="80" viewBox="0 0 500 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F59E0B" />
+            <stop offset="1" stop-color="#FBBF24" />
+          </linearGradient>
+          <linearGradient id="lgb" x1="0" y1="0" x2="0" y2="120" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F59E0B" stop-opacity="0.18" />
+            <stop offset="1" stop-color="#F59E0B" stop-opacity="0.04" />
+          </linearGradient>
+        </defs>
+        <circle cx="34" cy="60" r="26" stroke="url(#lg)" stroke-width="8" fill="url(#lgb)" />
+        <circle cx="86" cy="60" r="26" stroke="url(#lg)" stroke-width="8" fill="url(#lgb)" />
+        <circle cx="60" cy="60" r="20" fill="#1a1410" stroke="#F59E0B" stroke-width="5" />
+        <text x="60" y="68" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="20" fill="#F59E0B">¢</text>
+        <text x="128" y="72" font-family="Georgia,serif" font-weight="700" font-size="44" letter-spacing="2" fill="#faf5eb">LOOP</text>
+        <text x="268" y="72" font-family="Georgia,serif" font-weight="800" font-size="44" letter-spacing="2" fill="#F59E0B">CRED</text>
+      </svg>
+    </div>
+
+    <h1 class="headline">
+      Gerencie sua carteira<br />
+      <span>com total controle.</span>
+    </h1>
+
+    <p class="sub">
+      Sistema desktop para agentes de crédito — contratos SAC,<br />
+      parcelas automáticas e relatórios. Sem internet. Sem mensalidade.
+    </p>
+  </div>
+
+  <!-- METRICS -->
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-num">100%</div>
+      <div class="metric-label">Funciona Offline</div>
+    </div>
+    <div class="metric">
+      <div class="metric-num">SAC</div>
+      <div class="metric-label">Amortização Integrada</div>
+    </div>
+    <div class="metric">
+      <div class="metric-num">AES-256</div>
+      <div class="metric-label">Backup Criptografado</div>
+    </div>
+    <div class="metric">
+      <div class="metric-num">Multi</div>
+      <div class="metric-label">Usuários em Rede</div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features">
+    <div class="feat">
+      <span class="feat-icon">📋</span>
+      <div class="feat-title">Contratos com Amortização SAC</div>
+    </div>
+    <div class="feat">
+      <span class="feat-icon">💰</span>
+      <div class="feat-title">Controle de Pagamentos</div>
+    </div>
+    <div class="feat">
+      <span class="feat-icon">📊</span>
+      <div class="feat-title">Dashboard Financeiro</div>
+    </div>
+    <div class="feat">
+      <span class="feat-icon">👥</span>
+      <div class="feat-title">Cadastro de Clientes CPF/CNPJ</div>
+    </div>
+    <div class="feat">
+      <span class="feat-icon">📄</span>
+      <div class="feat-title">Exportação PDF e HTML</div>
+    </div>
+    <div class="feat">
+      <span class="feat-icon">🔒</span>
+      <div class="feat-title">Backup Criptografado AES-256</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

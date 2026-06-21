@@ -101,6 +101,7 @@ nav {
   height: 68px;
 }
 .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav-ctas { display: flex; align-items: center; gap: 10px; }
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a {
   text-decoration: none;
@@ -487,7 +488,7 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-cta, .nav-ctas { display: none; }
   .nav-burger { display: flex; }
   .nav-links.open {
     display: flex;

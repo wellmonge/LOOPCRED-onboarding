@@ -5,7 +5,7 @@ export default function Logo({ height = 40 }) {
   const g = `g${uid}`
   const gb = `gb${uid}`
   return (
-    <svg height={height} viewBox="0 0 480 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg height={height} viewBox="0 0 500 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id={g} x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse">
           <stop stopColor="#F59E0B" />

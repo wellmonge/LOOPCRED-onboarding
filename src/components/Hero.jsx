@@ -1,6 +1,7 @@
 import Logo from './Logo'
 
 const WA = 'https://wa.me/+556574004208?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20uma%20licen%C3%A7a%20do%20LOOPCRED.%20Poderiam%20me%20enviar%20mais%20informa%C3%A7%C3%B5es%3F'
+const DOWNLOAD = '/LoopCred-1.1.0.msi'
 
 const metrics = [
   { num: '100%', label: 'Funciona Offline' },
@@ -29,6 +30,7 @@ export default function Hero() {
         </p>
         <div className="hero-ctas">
           <a href={WA} target="_blank" rel="noreferrer" className="btn btn-primary">Adquirir Licença</a>
+          <a href={DOWNLOAD} download className="btn btn-ghost">Baixar e Testar Grátis</a>
           <a href="#how" className="btn btn-ghost">Ver Como Funciona</a>
         </div>
         <div className="hero-metrics">
