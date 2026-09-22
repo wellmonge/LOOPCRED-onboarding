@@ -1,7 +1,6 @@
+import { Check, Minus, Info } from 'lucide-react'
 import Reveal from './Reveal'
-
-const WA = 'https://wa.me/+556574004208?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20uma%20licen%C3%A7a%20do%20LOOPCRED.%20Poderiam%20me%20enviar%20mais%20informa%C3%A7%C3%B5es%3F'
-const DOWNLOAD = 'https://drive.google.com/uc?export=download&id=1zv6XLsYKL5SNxeA3o0mEpDuah63NL98s'
+import { DOWNLOAD_URL, WHATSAPP_LINK } from '../config'
 
 const PLANS = [
   {
@@ -96,18 +95,22 @@ export default function Pricing() {
                 </div>
                 <p className="plan-desc">{plan.desc}</p>
                 {plan.note && (
-                  <p style={{ fontSize: '0.75rem', color: 'var(--gold)', marginBottom: '0', marginTop: '-4px', opacity: 0.85 }}>
-                    ⓘ {plan.note}
+                  <p style={{ fontSize: '0.75rem', color: 'var(--gold)', marginBottom: '0', marginTop: '-4px', opacity: 0.85, display: 'flex', alignItems: 'flex-start', gap: '5px' }}>
+                    <Info size={13} style={{ flexShrink: 0, marginTop: '2px' }} />
+                    {plan.note}
                   </p>
                 )}
                 <div className="plan-sep" />
                 <ul className="plan-features">
                   {plan.features.map(f => (
-                    <li key={f.text} className={f.on ? '' : 'off'}>{f.text}</li>
+                    <li key={f.text} className={f.on ? '' : 'off'}>
+                      {f.on ? <Check size={15} strokeWidth={2.5} /> : <Minus size={15} strokeWidth={2.5} />}
+                      {f.text}
+                    </li>
                   ))}
                 </ul>
                 <a
-                  href={WA}
+                  href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noreferrer"
                   className={`btn ${plan.featured ? 'btn-primary' : 'btn-ghost'}`}
@@ -115,7 +118,7 @@ export default function Pricing() {
                   {plan.cta}
                 </a>
                 <a
-                  href={DOWNLOAD}
+                  href={DOWNLOAD_URL}
                   download
                   className="btn btn-ghost"
                   style={{ marginTop: '8px' }}

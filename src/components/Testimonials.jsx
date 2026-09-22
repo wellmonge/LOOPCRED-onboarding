@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react'
 import Reveal from './Reveal'
 
 const TESTIMONIALS = [
@@ -36,7 +37,11 @@ export default function Testimonials() {
           {TESTIMONIALS.map(t => (
             <Reveal key={t.name}>
               <div className="testi-card">
-                <div className="testi-stars">★★★★★</div>
+                <div className="testi-stars">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
+                  ))}
+                </div>
                 <p className="testi-body">{t.body}</p>
                 <div className="testi-author">
                   <div className="testi-avatar">{t.initials}</div>

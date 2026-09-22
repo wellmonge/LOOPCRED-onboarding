@@ -1,23 +1,24 @@
+import { MessageCircle, Settings, Users, TrendingUp } from 'lucide-react'
 import Reveal from './Reveal'
 
 const STEPS = [
   {
-    icon: '💬',
+    icon: MessageCircle,
     title: 'Fale Conosco',
     desc: 'Entre em contato pelo WhatsApp, escolha o plano ideal e efetue o pagamento. Você recebe o arquivo de licença (.lck) em minutos.',
   },
   {
-    icon: '⚙️',
+    icon: Settings,
     title: 'Instale e Configure',
     desc: 'Instale o LOOPCRED no seu computador Windows ou Mac, importe o arquivo de licença e configure em menos de 5 minutos.',
   },
   {
-    icon: '👥',
+    icon: Users,
     title: 'Cadastre seus Clientes',
     desc: 'Registre clientes com CPF/CNPJ e crie contratos de empréstimo com amortização SAC, taxas e prazos personalizados.',
   },
   {
-    icon: '📈',
+    icon: TrendingUp,
     title: 'Gerencie e Receba',
     desc: 'Acompanhe parcelas, registre pagamentos, emita relatórios e mantenha o controle completo da sua carteira de crédito.',
   },
@@ -37,7 +38,7 @@ export default function HowItWorks() {
             <Reveal key={s.title}>
               <div className="step">
                 <div className="step-num">0{i + 1}</div>
-                <div className="step-icon">{s.icon}</div>
+                <div className="step-icon"><s.icon size={22} strokeWidth={1.75} /></div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
               </div>

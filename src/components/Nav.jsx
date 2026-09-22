@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Logo from './Logo'
-
-const DOWNLOAD = 'https://drive.google.com/uc?export=download&id=1zv6XLsYKL5SNxeA3o0mEpDuah63NL98s'
+import { DOWNLOAD_URL, WHATSAPP_LINK } from '../config'
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
@@ -22,8 +21,8 @@ export default function Nav() {
         </ul>
 
         <div className="nav-ctas">
-          <a className="btn btn-ghost nav-cta" href={DOWNLOAD} download>Baixar e Testar Grátis</a>
-          <a className="btn btn-primary nav-cta" href="https://wa.me/+556574004208?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20uma%20licen%C3%A7a%20do%20LOOPCRED.%20Poderiam%20me%20enviar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noreferrer">Adquirir Licença</a>
+          <a className="btn btn-ghost nav-cta" href={DOWNLOAD_URL} download>Baixar e Testar Grátis</a>
+          <a className="btn btn-primary nav-cta" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">Adquirir Licença</a>
         </div>
 
         <button
