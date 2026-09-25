@@ -4,4 +4,4 @@ export const WHATSAPP_LINK = 'https://wa.me/+556574004208?text=Ol%C3%A1%2C%20gos
 // cutting a new release; every component that links to the installer reads
 // from this single constant.
 export const DOWNLOAD_VERSION = 'v1.0.0'
-export const DOWNLOAD_URL = `https://github.com/wellmonge/LOOPCRED-onboarding/releases/download/${DOWNLOAD_VERSION}/LoopCred-Setup-${DOWNLOAD_VERSION.replace(/^v/, '')}.exe`
+export const DOWNLOAD_URL = `https://github.com/wellmonge/LOOPCRED-onboarding/releases/download/${DOWNLOAD_VERSION}/LoopCred.${DOWNLOAD_VERSION.replace(/^v/, '')}.msi`
