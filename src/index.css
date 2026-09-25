@@ -417,44 +417,6 @@ nav {
 .plan-features li.off svg { color: var(--muted); opacity: 0.5; }
 .plan .btn { width: 100%; justify-content: center; }
 
-/* ── TESTIMONIALS ── */
-#testimonials { padding: 112px 0; background: var(--bg2); }
-.testi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 56px;
-}
-.testi-card > .testi-stars + .testi-body { flex-grow: 1; }
-.testi-card {
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 32px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.testi-stars { color: var(--amber); display: flex; gap: 3px; margin-bottom: 16px; }
-.testi-body { font-size: 1rem; color: var(--cream); line-height: 1.7; margin: 0 0 24px; }
-.testi-author { display: flex; align-items: center; gap: 12px; }
-.testi-avatar {
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  background: rgba(245,158,11,.15);
-  border: 1px solid rgba(245,158,11,.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Syne', serif;
-  font-weight: 700;
-  font-size: .95rem;
-  color: var(--amber);
-  flex-shrink: 0;
-}
-.testi-name { font-weight: 600; font-size: .9rem; }
-.testi-role { font-size: .78rem; color: var(--muted); }
-
 /* ── FAQ ── */
 #faq { padding: 104px 0; background: var(--bg2); }
 .faq-list {
