@@ -42,7 +42,7 @@ export default function Testimonials() {
                     <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
                   ))}
                 </div>
-                <p className="testi-body">{t.body}</p>
+                <blockquote className="testi-body">{t.body}</blockquote>
                 <div className="testi-author">
                   <div className="testi-avatar">{t.initials}</div>
                   <div>

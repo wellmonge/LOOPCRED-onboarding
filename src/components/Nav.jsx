@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Logo from './Logo'
-import { DOWNLOAD_URL, WHATSAPP_LINK } from '../config'
+import { WHATSAPP_LINK } from '../config'
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
@@ -14,14 +14,13 @@ export default function Nav() {
         </a>
 
         <ul className={`nav-links${open ? ' open' : ''}`}>
-          <li><a href="#how" onClick={close}>Como Funciona</a></li>
           <li><a href="#features" onClick={close}>Funcionalidades</a></li>
-          <li><a href="#pricing" onClick={close}>Planos</a></li>
+          <li><a href="#how" onClick={close}>Como Funciona</a></li>
+          <li><a href="#pricing" onClick={close}>Licenças</a></li>
           <li><a href="#faq" onClick={close}>FAQ</a></li>
         </ul>
 
         <div className="nav-ctas">
-          <a className="btn btn-ghost nav-cta" href={DOWNLOAD_URL} download>Baixar e Testar Grátis</a>
           <a className="btn btn-primary nav-cta" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">Adquirir Licença</a>
         </div>
 

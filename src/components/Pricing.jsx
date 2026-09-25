@@ -83,10 +83,9 @@ export default function Pricing() {
           {PLANS.map(plan => (
             <Reveal key={plan.name}>
               <div className={`plan${plan.featured ? ' featured' : ''}`}>
-                {plan.badge && <div className="plan-badge">{plan.badge}</div>}
-                <div className="plan-name">{plan.name}</div>
-                <div style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', color: 'var(--gold)', marginBottom: '8px', opacity: 0.8 }}>
-                  {plan.tag}
+                <div className="plan-head">
+                  <div className="plan-name">{plan.name}</div>
+                  {plan.badge && <div className={`plan-badge${plan.featured ? ' hot' : ''}`}>{plan.badge}</div>}
                 </div>
                 <div className="plan-price" style={!plan.price ? { fontSize: '2.2rem' } : {}}>
                   {plan.price
@@ -95,7 +94,7 @@ export default function Pricing() {
                 </div>
                 <p className="plan-desc">{plan.desc}</p>
                 {plan.note && (
-                  <p style={{ fontSize: '0.75rem', color: 'var(--gold)', marginBottom: '0', marginTop: '-4px', opacity: 0.85, display: 'flex', alignItems: 'flex-start', gap: '5px' }}>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--amber)', marginBottom: '0', marginTop: '-4px', opacity: 0.85, display: 'flex', alignItems: 'flex-start', gap: '5px' }}>
                     <Info size={13} style={{ flexShrink: 0, marginTop: '2px' }} />
                     {plan.note}
                   </p>

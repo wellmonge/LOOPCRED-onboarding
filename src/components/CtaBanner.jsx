@@ -7,18 +7,17 @@ export default function CtaBanner() {
       <div className="cta-glow" />
       <div className="container">
         <Reveal>
-          <div className="tag">Comece Agora</div>
           <h2 className="section-title">Pronto para organizar <span>sua carteira?</span></h2>
           <p className="section-sub" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
-            Centenas de agentes de crédito já gerenciam seus empréstimos com LOOPCRED.
-            Sua licença chega em minutos pelo WhatsApp.
+            Fale com a gente pelo WhatsApp e receba sua licença em minutos.
           </p>
+          <div className="cta-btns">
           <a
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noreferrer"
             className="btn btn-primary"
-            style={{ fontSize: '1.05rem', padding: '16px 40px' }}
+            style={{ fontSize: '1.05rem', padding: '16px 36px' }}
           >
             Adquirir Licença pelo WhatsApp
           </a>
@@ -26,10 +25,11 @@ export default function CtaBanner() {
             href={DOWNLOAD_URL}
             download
             className="btn btn-ghost"
-            style={{ fontSize: '1.05rem', padding: '16px 40px', marginTop: '12px' }}
+            style={{ fontSize: '1.05rem', padding: '15px 36px' }}
           >
             Baixar e Testar Grátis
           </a>
+          </div>
           <p className="cta-note">Licença anual · Sem mensalidade · Instalação assistida inclusa</p>
         </Reveal>
       </div>

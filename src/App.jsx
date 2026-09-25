@@ -16,10 +16,10 @@ export default function App() {
       <main>
         <Hero />
         <Ticker />
-        <HowItWorks />
         <Features />
-        <Pricing />
+        <HowItWorks />
         <Testimonials />
+        <Pricing />
         <Faq />
         <CtaBanner />
       </main>
